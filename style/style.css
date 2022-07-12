@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    /*COLORS*/
+
+    /*Primary*/
+    --darkCyan : hsl(158, 36%, 37%);
+    --cream : hsl(30, 38%, 92%);
+
+    /*Neutral*/
+
+    --veryDarkBlue : hsl(212, 21%, 14%);
+    --darkGrayishBlue : hsl(228, 12%, 48%);
+    --white : hsl(0, 0%, 100%);
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+.container{
+    display: grid;
+    place-items: center;
+    padding-block: 120px ;
+    background-color: var(--cream);
+}
+.prd{
+    display: flex;
+    align-items: center;
+    width: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+.prdImage{
+    display: flex;
+}
+.prdImageDesktop{
+    width: 350px;
+}
+.prdImageMobile{
+    display: none;
+}
+
+.prdDetails{
+    gap: 32px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.prdType{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--darkGrayishBlue);
+    letter-spacing: 5px;
+}
+
+.prdName{
+    font-family: 'Fraunces', serif;
+    color: var(--veryDarkBlue);
+    font-size: 38px;
+    line-height: 1;
+}
+.prdBody{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--darkGrayishBlue);
+}
+
+.prdPrice{
+    font-family: 'Fraunces', serif;
+    color: var(--darkCyan);
+    font-size: 38px;
+    line-height: 1;
+}
+.prdDiscount{
+    color: var(--darkGrayishBlue);
+    text-decoration: line-through;
+}
+
+.cartBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px;
+    height: 50px;
+    border-radius: 10px;
+    color: var(--white);
+    border: none;
+    background: var(--darkCyan);
+    transition: all .3s ;
+}
+.cartBtn:hover{
+    background-color: hsl(158, 36%, 30%);
+}
+
+@media (max-width: 768px){
+    .container{
+        padding: 20px 10px;
+    }
+    .prd{
+        flex-direction: column;
+        width: 100%;
+    }
+    .prdImageDesktop{
+        display: none;
+    }
+    .prdImage{
+        width: 100%;
+    }
+    .prdImageMobile{
+        display: block;
+        width: 100%;
+    }
+}
